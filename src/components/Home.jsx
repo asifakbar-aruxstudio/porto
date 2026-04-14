@@ -29,22 +29,27 @@ const Home = () => {
     const currentRole = roles[roleIndex];
 
     const handleTyping = () => {
-      setText((prev) =>
-        isDeleting
+      setText((prev) => {
+        const newText = isDeleting
           ? currentRole.substring(0, prev.length - 1)
-          : currentRole.substring(0, prev.length + 1)
-      );
-
-      if (!isDeleting && text === currentRole) {
-        setTimeout(() => setIsDeleting(true), pauseDuration);
-      } else if (isDeleting && text === "") {
-        setIsDeleting(false);
-        setRoleIndex((prev) => (prev + 1) % roles.length);
-      }
+          : currentRole.substring(0, prev.length + 1);
+        return newText;
+      });
     };
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
+  }, [roleIndex]);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    if (!isDeleting && text === currentRole) {
+      const timer = setTimeout(() => setIsDeleting(true), pauseDuration);
+      return () => clearTimeout(timer);
+    } else if (isDeleting && text === "") {
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }
   }, [text, isDeleting, roleIndex]);
 
   return (
