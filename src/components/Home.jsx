@@ -1,10 +1,30 @@
 import { useEffect, useState } from "react";
-import { FiArrowRight, FiDownload } from "react-icons/fi";
+import { FiArrowRight, FiDownload, FiCheck } from "react-icons/fi";
 import About from "./About";
 import Skills from "./Skills";
 import Services from "./Services";
 import Projects from "./Projects";
 import Contact from "./Contact";
+
+const notifyVisit = async () => {
+  try {
+    const visitorInfo = {
+      page: "Portfolio",
+      url: window.location.href,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      screenSize: `${window.screen.width}x${window.screen.height}`,
+    };
+    
+    await fetch(`${import.meta.env.VITE_API_URL}/api/notify`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(visitorInfo),
+    });
+  } catch (error) {
+    console.log("Notification sent silently");
+  }
+};
 
 const roles = [
   "MERN Stack Developer",
@@ -20,9 +40,13 @@ const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    notifyVisit();
+    setTimeout(() => setShowWelcome(true), 2000);
+    setTimeout(() => setShowWelcome(false), 6000);
   }, []);
 
   useEffect(() => {
@@ -147,6 +171,22 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {showWelcome && (
+        <div className="fixed top-24 right-6 z-50 animate-fadeInRight">
+          <div className="bg-slate-800 border border-purple-500/30 rounded-xl p-4 shadow-xl shadow-purple-500/20">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                <FiCheck className="text-green-400" />
+              </div>
+              <div>
+                <p className="text-white font-medium text-sm">Welcome!</p>
+                <p className="text-gray-400 text-xs">Thanks for visiting my portfolio</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <About />
       <Skills />
