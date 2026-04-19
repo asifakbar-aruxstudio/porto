@@ -6,6 +6,7 @@ import Services from "./Services";
 import Projects from "./Projects";
 import Contact from "./Contact";
 
+
 const notifyVisit = async () => {
   try {
     const visitorInfo = {
@@ -146,7 +147,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-sky-500 to-pink-500 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
               <div className="relative w-72 sm:w-80 lg:w-96 aspect-square rounded-3xl overflow-hidden border border-white/10">
                 <img
-                  src="./enhancerImage.png"
+                  src="./enhancerImage.jpg"
                   alt="Asif Akbar"
                   className="w-full h-full object-cover"
                 />
