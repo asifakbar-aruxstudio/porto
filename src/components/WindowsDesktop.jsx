@@ -62,7 +62,7 @@ const apps = [
     title: "Resume",
     icon: "📄",
     external: true,
-    url: "/Asif Akbar.pdf",
+    url: "/Asif-Ali Full-Stack-Developer.pdf",
     color: "from-indigo-500 to-purple-500",
     description: "Download CV"
   }
@@ -445,7 +445,7 @@ const WindowsDesktop = () => {
               {/* LinkedIn */}
               <button
                 onClick={() => {
-                  window.open('https://linkedin.com/in/asifakbar8', '_blank');
+                  window.open('https://linkedin.com/in/asif-akbar-74a972206', '_blank');
                 }}
                 className="w-7 h-7 md:w-8 md:h-8 rounded-lg hover:bg-white/5 flex items-center justify-center text-blue-400 hover:text-blue-300 transition-colors"
                 title="LinkedIn"

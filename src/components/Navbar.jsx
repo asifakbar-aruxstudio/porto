@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FiMenu, FiX, FiMoon, FiSun, FiDownload, FiHome, FiUser, FiBriefcase, FiMail } from "react-icons/fi";
 
 const sections = [
@@ -81,14 +81,14 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="/Asif Akbar.pdf"
+          <Link
+            to="/Asif-Ali Full-Stack-Developer.pdf"
             download
             className="group flex items-center gap-2 px-5 py-2.5 rounded-full btn-3d-primary text-sm"
           >
             <FiDownload className="group-hover:animate-bounce" />
             <span>Resume</span>
-          </a>
+          </Link>
 
           <button
             onClick={() => setDark(!dark)}
@@ -144,15 +144,15 @@ const Navbar = () => {
             </nav>
 
             <div className="mt-8 pt-8 border-t border-white/10 dark:border-white/5">
-              <a
-                href="/Asif Akbar.pdf"
+              <Link
+                to="/Asif-Ali Full-Stack-Developer.pdf"
                 download
                 className="flex items-center justify-center gap-2 w-full py-4 rounded-xl btn-3d-primary text-sm"
               >
                 <FiDownload />
                 Download Resume
-              </a>
-              
+              </Link>
+
               <button
                 onClick={() => setDark(!dark)}
                 className="flex items-center justify-center gap-2 w-full mt-4 py-4 rounded-xl glass-effect-dark hover:scale-105 transition-all"
