@@ -69,12 +69,12 @@ const Contact = () => {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-4">
-            Let's <span className="gradient-text">Connect</span>
+            Let&apos;s <span className="gradient-text">Connect</span>
           </h2>
           
           <p className="text-gray-400 max-w-2xl mx-auto">
             Feel free to reach out for collaborations, projects, or just to say hello.
-            I'm always excited to connect with new people!
+            I&apos;m always excited to connect with new people!
           </p>
         </div>
 

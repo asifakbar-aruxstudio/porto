@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
         const res = await fetch(`${import.meta.env.VITE_API_URL}/api/visitors/count`);
         const data = await res.json();
         setVisitorCount(data.count || 0);
-      } catch (error) {
+      } catch {
         setVisitorCount(Math.floor(Math.random() * 50) + 10);
       }
     };

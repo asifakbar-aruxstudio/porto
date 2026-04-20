@@ -17,8 +17,8 @@ const notifyVisit = async () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(visitorInfo),
     });
-  } catch (error) {
-    console.log("Notification sent silently");
+  } catch {
+    // Silent catch - notification failure is non-critical
   }
 };
 
@@ -111,7 +111,7 @@ const Home = () => {
 
             {/* Hero heading */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3 md:mb-4">
-              <span className="block">Hi, I'm</span>
+              <span className="block">Hi, I&apos;m</span>
               <span className="block windows-gradient-text text-shadow-glow">Asif Akbar</span>
             </h1>
 
@@ -141,7 +141,7 @@ const Home = () => {
               </button>
 
               <a 
-                href="/Asif Akbar.pdf" 
+                href="/Asif-Ali Full-Stack-Developer.pdf" 
                 download 
                 className="btn-windows-secondary inline-flex items-center justify-center gap-2 group text-sm md:text-base px-6 md:px-8 py-3 md:py-4"
               >
@@ -200,7 +200,12 @@ const Home = () => {
                   <div className="mt-8 text-center">
                     <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-windows-blue to-windows-cyan p-1 shadow-3d-glow">
                       <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
-                        <FiUser className="w-20 h-20 text-windows-blue" />
+                        {/* <FiUser className="w-20 h-20 text-windows-blue" /> */}
+                        <img 
+                          src="/Profile.png" 
+                          alt="Asif Akbar" 
+                          className="w-full h-full object-cover rounded-full opacity-0"                           onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
+                        />
                       </div>
                     </div>
                     <p className="mt-4 text-white font-semibold">Asif Akbar</p>

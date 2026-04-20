@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect, useCallback, useRef } from "react";
-import { FiX, FiMinus, FiMaximize, FiHome, FiUser, FiBriefcase, FiMail, FiFileText, FiExternalLink } from "react-icons/fi";
+import { FiX, FiMinus, FiMaximize, FiExternalLink } from "react-icons/fi";
 import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 import Home from "./Home";
 import About from "./About";

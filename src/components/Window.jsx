@@ -1,7 +1,9 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useRef, useEffect } from "react";
 import { FiX, FiMinus, FiMaximize } from "react-icons/fi";
 
 const Window = ({
+  // eslint-disable-next-line no-unused-vars
   id,
   title,
   icon,
