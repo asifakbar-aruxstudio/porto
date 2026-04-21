@@ -10,11 +10,11 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'My Portfolio',
-      description: 'A modern, responsive portfolio built using React and Tailwind CSS with smooth animations and a professional design.',
-      languages: ['React', 'Tailwind CSS', 'Vercel'],
-      link: 'https://porto-mu-peach.vercel.app/',
-      image: 'blue.png',
+      title: 'Hotelify',
+      description: 'A modern, responsive real world app Hotelify built using React and Tailwind CSS with smooth animations and a professional design.',
+      languages: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB  ','Express.js', 'Rest API'],
+      link: 'https://hotelify-cyan.vercel.app/',
+      image: 'logo.png',
       color: 'from-purple-500 to-pink-500',
     },
     {
