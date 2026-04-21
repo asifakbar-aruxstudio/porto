@@ -66,7 +66,7 @@ const About = () => {
               ))}
             </div>
 
-            <a href="/Asif Akbar.pdf" download className="btn-3d-primary inline-flex items-center gap-2">
+            <a href="/Asif-Ali-Full-Stack-Developer.pdf" download className="btn-3d-primary inline-flex items-center gap-2">
               <FiDownload />
               Download CV
             </a>
