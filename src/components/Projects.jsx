@@ -18,11 +18,11 @@ const Projects = () => {
       color: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'Help Human Rights Organization',
-      description: 'NGO platform with user-friendly features, donation system, and event management for humanitarian work.',
+      title: 'Hotel Al Riaz',
+      description: 'Where timeless luxury meets warm hospitality in the heart of Larkana',
       languages: ['React', 'Tailwind CSS', 'Vercel'],
-      link: 'https://project-wine-omega-21.vercel.app/',
-      image: 'help.jpg',
+      link: 'https://hotelalriaz.vercel.app/',
+      image: 'Hotel Al Riaz.jpeg',
       color: 'from-green-400 to-blue-500',
     },
     {
